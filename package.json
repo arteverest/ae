@@ -1,0 +1,22 @@
+{
+  "name": "ae",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arteverest/ae.git"
+  },
+  "author": " <michal.zurek@arteverest.pl>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arteverest/ae/issues"
+  },
+  "homepage": "https://github.com/arteverest/ae"
+}
