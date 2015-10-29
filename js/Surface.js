@@ -54,8 +54,7 @@
         this.light.setPosition(150 * Math.sin(this.now * 0.001), 150 * Math.cos(this.now * 0.0005), 60);
         this.renderer.render(this.scene);
 
-        context.drawImage(this.renderer.element, 0, 0, this.renderer.width, this.renderer.height, 0, 0, 500, 500)
-
+        context.drawImage(this.renderer.element, 0, 0, this.renderer.width, this.renderer.height, 0, 0, 500, 500);
 
         var ox, oy, oz, l, light, v, vertex,
             offset = MESH_DEPTH / 2;
