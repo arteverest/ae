@@ -4,9 +4,9 @@
     // config
     var MESH_SPEED = 3e-3;
     var MESH_DEPTH = 20;
-    var MESH_X_RANGE = .2;
-    var MESH_Y_RANGE = .2;
-    var MESH_Z_RANGE = .1;
+    var MESH_X_RANGE = .3;
+    var MESH_Y_RANGE = .3;
+    var MESH_Z_RANGE = .05;
 
     var Surface = root.Surface = function Surface() {
         this.scene = null;
