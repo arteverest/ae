@@ -8,6 +8,9 @@
     var MESH_Y_RANGE = .3;
     var MESH_Z_RANGE = .05;
 
+    var MESH_SEGMENTS = 10;
+    var MESH_SLICES = 30;
+
     var Surface = root.Surface = function Surface() {
         this.scene = null;
         this.mesh = null;
@@ -23,7 +26,7 @@
         this.renderer = new FSS.CanvasRenderer();
         this.scene = new FSS.Scene();
         this.light = new FSS.Light('#000000', '#ff0000');
-        this.geometry = new FSS.Plane(300, 300, 10, 30);
+        this.geometry = new FSS.Plane(300, 300, MESH_SEGMENTS, MESH_SLICES);
         this.material = new FSS.Material('#ff0000');
         this.mesh = new FSS.Mesh(this.geometry, this.material);
         this.now = Date.now();
