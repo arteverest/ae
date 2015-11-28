@@ -6,8 +6,19 @@ body {
   text-align: center;
 }
 .logo__canvas {
-  -webkit-clip-path: url(#svgPath);
-  clip-path: url(#svgPath);
+  display: none;
+}
+
+@media screen and (min-width: 480px) {
+  .logo__fallback {
+    display: none;
+  }
+
+  .logo__canvas {
+    display: inline-block;
+    -webkit-clip-path: url(#svgPath);
+    clip-path: url(#svgPath);
+  }
 }
 .logo__text {
   color: rgb(150, 0, 0);
