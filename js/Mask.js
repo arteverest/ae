@@ -16,6 +16,7 @@
     };
     Mask.prototype.update = function() {};
     Mask.prototype.render = function(callback) {
+
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
         callback ? this.context.save() : this.context.fillStyle = "rgb(255,255,255)";
 
@@ -31,7 +32,7 @@
         this.context.fill();
 
         if (callback) {
-            this.context.clip();
+            //this.context.clip();
             callback(this.context);
         }
 

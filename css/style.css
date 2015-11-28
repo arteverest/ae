@@ -1,13 +1,16 @@
 body {
-    background: black;
+  background: black;
 }
 .logo {
-    margin: 10% auto;
-    text-align: center;
+  margin: 10% auto;
+  text-align: center;
 }
-.logo__canvas {}
+.logo__canvas {
+  -webkit-clip-path: url(#svgPath);
+  clip-path: url(#svgPath);
+}
 .logo__text {
-    color: rgb(150, 0, 0);
-    font-weight: 100;
-    font-family: sans-serif;
+  color: rgb(150, 0, 0);
+  font-weight: 100;
+  font-family: sans-serif;
 }
