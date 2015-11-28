@@ -1,35 +1,37 @@
 (function(root) {
-    'use strict';
+  'use strict';
 
-    var Engine = root.Engine = function Engine() {
-        this.mask = null;
-        this.surface = null;
+  var CANVAS_DOM_SELECTOR = '.js-mask';
 
-        this.warmUp();
-        this.run();
-    };
+  var Engine = root.Engine = function Engine() {
+    this.surface = null;
+    this.canvas = null;
+    this.context = null;
 
-    Engine.prototype.warmUp = function() {
-        this.mask = new Mask('.js-mask');
-        this.surface = new Surface();
-    };
+    this.warmUp();
+    this.run();
+  };
 
-    Engine.prototype.run = function() {
-        this.update();
-        this.render();
+  Engine.prototype.warmUp = function() {
+    this.surface = new Surface();
+    this.canvas = document.querySelector(CANVAS_DOM_SELECTOR);
+    this.context = this.canvas.getContext('2d');
+  };
 
-        window._RAF(this.run.bind(this));
-    };
-    Engine.prototype.update = function() {
-        this.mask.update();
-        this.surface.update();
-        // TWEEN.update();
-    };
-    Engine.prototype.render = function() {
-        this.mask.render(function(context) {
-            this.surface.render(context);
-        }.bind(this));
+  Engine.prototype.run = function() {
+    this.update();
+    this.render();
 
-    };
+    window._RAF(this.run.bind(this));
+  };
+  Engine.prototype.update = function() {
+    this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    this.context.save();
+    this.surface.update(this.context);
+    this.context.restore();
+  };
+  Engine.prototype.render = function() {
+    this.surface.render(this.context);
+  };
 
 }(window));
