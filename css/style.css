@@ -1,13 +1,27 @@
 body {
-    background: black;
+  background: black;
 }
 .logo {
-    margin: 10% auto;
-    text-align: center;
+  margin: 10% auto;
+  text-align: center;
 }
-.logo__canvas {}
+.logo__canvas {
+  display: none;
+}
+
+@media screen and (min-width: 480px) {
+  .logo__fallback {
+    display: none;
+  }
+
+  .logo__canvas {
+    display: inline-block;
+    -webkit-clip-path: url(#svgPath);
+    clip-path: url(#svgPath);
+  }
+}
 .logo__text {
-    color: rgb(150, 0, 0);
-    font-weight: 100;
-    font-family: sans-serif;
+  color: rgb(150, 0, 0);
+  font-weight: 100;
+  font-family: sans-serif;
 }
