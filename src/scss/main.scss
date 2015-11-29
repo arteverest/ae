@@ -4,4 +4,11 @@ body {
   background: black;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+@import 'components/layout';
+@import 'components/menu';
 @import 'components/logo';
+@import 'components/button';
