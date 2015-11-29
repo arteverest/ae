@@ -1,0 +1,26 @@
+.logo {
+  margin: 10% auto;
+  text-align: center;
+
+  &__text {
+    color: rgb(150, 0, 0);
+    font-weight: 100;
+    font-family: sans-serif;
+  }
+
+  &__canvas {
+    display: none;
+
+    @media screen and (min-width: $breakpoint) {
+      display: inline-block;
+      -webkit-clip-path: url(#svgPath);
+      clip-path: url(#svgPath);
+    }
+  }
+
+  &__fallback {
+    @media screen and (min-width: $breakpoint) {
+      display: none;
+    }
+  }
+}

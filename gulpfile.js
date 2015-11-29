@@ -16,7 +16,7 @@ gulp.task('lint', function() {
 });
 
 gulp.task('sass', function() {
-  return gulp.src(SRC_PATH.concat('scss/**/*.scss'))
+  return gulp.src(SRC_PATH.concat('scss/*.scss'))
     .pipe(sass())
     .pipe(gulp.dest(DIST_PATH.concat('css')));
 });
