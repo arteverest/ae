@@ -8,6 +8,8 @@ var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
+var sourcemaps = require('gulp-sourcemaps');
+var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('lint', function() {
   return gulp.src(SRC_PATH.concat('js/**/*.js'))
@@ -17,7 +19,10 @@ gulp.task('lint', function() {
 
 gulp.task('sass', function() {
   return gulp.src(SRC_PATH.concat('scss/*.scss'))
-    .pipe(sass())
+    .pipe(sourcemaps.init())
+    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(autoprefixer())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(DIST_PATH.concat('css')));
 });
 
