@@ -1,0 +1,17 @@
+.post {
+  width: $itemWidth;
+  height: $itemHeight / 2;
+  border: 1px solid $white;
+
+  margin-right: $layoutPadding / 2;
+  margin-bottom: $layoutPadding / 2;
+
+  background-image: url('../../img/github.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:hover {
+    box-shadow: inset 0 0 $layoutPadding * 2 $white;
+  }
+}

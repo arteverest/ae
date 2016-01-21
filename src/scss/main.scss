@@ -1,7 +1,21 @@
+$baseSize: 24px;
+$layoutMaxWidth: 1024px;
+$layoutPadding: $baseSize;
+$layoutFontSize: $baseSize * 2/3;
+
 $breakpoint: 480px;
 
+// colors
+$white: #FFF;
+$black: #000;
+
+$itemDefaultOpacity: 0.8;
+$itemHoverOpacity: 1;
+$itemWidth: 288px; // padding * 12
+$itemHeight: 288px; // padding * 12
+
 body {
-  background: black;
+  background: $black;
 }
 
 * {
@@ -12,3 +26,6 @@ body {
 @import 'components/menu';
 @import 'components/logo';
 @import 'components/button';
+@import 'components/slider';
+@import 'components/panel';
+@import 'components/post';

@@ -1,22 +1,23 @@
 .button {
   display: inline-block;
-  text-align: center;
-  background-color: rgb(255, 255, 255);
-  cursor: pointer;
-  text-decoration: none;
-  color: rgb(0, 0, 0);
   font-weight: bold;
   font-family: sans-serif;
-  padding: 24px;
-  width: 280px;
+  font-size: $layoutFontSize;
+  color: $black;
+  text-align: center;
+  background-color: $white;
+  cursor: pointer;
+  text-decoration: none;
+  padding: $layoutPadding;
+  width: $itemWidth;
   transition: .2s linear all;
-  opacity: 0.8;
+  opacity: $itemDefaultOpacity;
 
   &__text {
     color: inherit;
   }
 
   &:hover {
-    opacity: 1;
+    opacity: $itemHoverOpacity;
   }
 }

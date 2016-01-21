@@ -4,7 +4,7 @@
   align-items: center;
 
   &__item {
-    margin-top: 12px;
+    margin-top: $layoutPadding / 2;
 
     &:first-child {
       margin-top: 0;

@@ -7,7 +7,7 @@
                 window.webkitRequestAnimationFrame ||
                 window.mozRequestAnimationFrame ||
                 function(e) {
-                    window.setTimeout(e, 1000 / 60)
+                    window.setTimeout(e, 1000 / 60);
                 };
     }();
 
